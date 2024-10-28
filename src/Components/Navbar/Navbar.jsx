@@ -1,30 +1,57 @@
 import React from "react";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
+import Typography from "@mui/material/Typography";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-function Navbar() {
+const Navbar = () => {
   return (
-    <AppBar position="static" color="primary">
-      <Toolbar>
-        <IconButton
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          sx={{ mr: 2 }}
+    <div className="flex justify-between items-center px-8 py-3 shadow-lg w-full fixed top-0 bg-transparent z-10">
+      <Typography
+        variant="h6"
+        component="div"
+        sx={{ fontWeight: "bold", color: "black" }}
+      >
+        Humaria
+      </Typography>
+
+      <div className="flex space-x-6 items-center">
+        <a href="#home" className="text-blue-800 hover:text-white font-medium">
+          Home
+        </a>
+        <span className="text-gray-400">|</span>
+        <a
+          href="#service"
+          className="text-blue-800 hover:text-white font-medium"
         >
-          <MenuIcon />
-        </IconButton>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          MyApp
-        </Typography>
-        <Button color="inherit">Login</Button>
-      </Toolbar>
-    </AppBar>
+          Service
+        </a>
+        <span className="text-gray-400">|</span>
+        <a
+          href="#contact"
+          className="text-blue-800 hover:text-white font-medium"
+        >
+          Contact Us
+        </a>
+      </div>
+
+      <Button
+        variant="contained"
+        color="primary"
+        endIcon={<ArrowForwardIcon />}
+        sx={{
+          borderRadius: "20px",
+          backgroundColor: "#ffffff",
+          color: "black",
+          fontWeight: "bold",
+          "&:hover": {
+            backgroundColor: "#e0e0e0",
+          },
+        }}
+      >
+        BOOK A CALL
+      </Button>
+    </div>
   );
-}
+};
 
 export default Navbar;
