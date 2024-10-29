@@ -1,8 +1,12 @@
 // src/components/Header.jsx
 import React from "react";
+import Button from "../Button/Button";
 const Header = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center space-y-4">
+    <div
+      id="home"
+      className="min-h-screen flex flex-col items-center justify-center space-y-12"
+    >
       <p className="text-white text-3xl sm:text-4xl md:text-8xl">
         <span
           className="font-bold"
@@ -16,6 +20,7 @@ const Header = () => {
           Samosir Island, North Sumatra
         </span>
       </p>
+      <Button />
     </div>
   );
 };
