@@ -22,14 +22,14 @@ const About = () => {
   return (
     <div
       id="about"
-      className="flex flex-col items-center h-full bg-custom-white dark:bg-[#191717] p-10 text-justify font-poppins"
+      className="flex flex-col items-center min-h-screen  p-10 text-justify font-poppins mt-10"
     >
       <div className="w-full md:w-3/4 lg:w-1/2">
         <motion.h1
           initial="hidden"
           whileInView="reveal"
           transition={{ staggerChildren: 0.06 }}
-          className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6"
+          className="text-4xl font-bold text-gray-900 dark:text-custom-white mb-6"
         >
           {headingChars.map((char, index) => (
             <motion.span key={index} variants={charVariants}>
@@ -41,7 +41,7 @@ const About = () => {
           initial="hidden"
           whileInView="reveal"
           transition={{ staggerChildren: 0.01 }}
-          className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mt-4"
+          className="text-lg text-gray-700 dark:text-custom-white leading-relaxed mt-4"
         >
           {textChars.map((char, index) => (
             <motion.span key={index} variants={charVariants}>
@@ -53,7 +53,7 @@ const About = () => {
           initial="hidden"
           whileInView="reveal"
           transition={{ staggerChildren: 0.01 }}
-          className="mt-4 text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
+          className="mt-4 text-lg text-gray-700 dark:text-custom-white leading-relaxed"
         >
           {paragraphChars.map((char, index) => (
             <motion.span key={index} variants={charVariants}>
