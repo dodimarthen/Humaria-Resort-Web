@@ -1,13 +1,25 @@
+// Button.jsx
 import React from "react";
 
-const Button = () => {
+const Button = ({ onClick }) => {
   return (
-    <div className="mb-10">
+    <div className="mt-7">
       <button
-        className="rounded-full bg-[#DBD3D3] py-3 px-4 border border-slate-800 text-center text-sm text-slate-800 transition-all shadow-md hover:shadow-lg focus:shadow-none active:shadow-none hover:bg-slate-700 hover:text-white focus:bg-slate-700 active:bg-slate-700 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        onClick={onClick}
+        className="flex items-center rounded-xl bg-transparent py-3 px-6 border-2 border-white text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:shadow-none active:shadow-none hover:bg-white hover:text-black focus:bg-[#257180] active:bg-[#257180] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
         type="button"
       >
-        Book Now
+        Make A Reservation
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="2"
+          stroke="currentColor"
+          className="w-4 h-4 ml-2"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
       </button>
     </div>
   );
